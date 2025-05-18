@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starter Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- PWA meta (optional) -->
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <!-- ===== Header / Nav ===== -->
+  <header class="topbar">
+    <button id="menuBtn" aria-label="Open menu">☰</button>
+    <h1>My Website</h1>
+    <div class="spacer"></div>
+    <button id="themeBtn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <!-- ===== Side Drawer ===== -->
+  <nav id="drawer" class="drawer">
+    <button id="closeDrawer" aria-label="Close menu">✕</button>
+    <a href="#home">Home</a>
+    <a href="#cards">Demo Cards</a>
+    <a href="#about" id="aboutLink">About</a>
+    <footer>&copy; 2025</footer>
+  </nav>
+
+  <!-- ===== Overlay (drawer / modal) ===== -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- ===== Main Content ===== -->
+  <main id="home">
+    <section class="hero">
+      <h2>Welcome!</h2>
+      <p>A tiny yet powerful web starter running on plain HTML, CSS & JS.</p>
+      <a class="btn" href="#cards">See it in action</a>
+    </section>
+
+    <!-- Live‑filter search -->
+    <section id="cards">
+      <h2>Filterable Cards</h2>
+      <input type="search" id="search" placeholder="Type to filter…" />
+      <div id="cardGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- ===== Modal ===== -->
+  <dialog id="aboutModal">
+    <h2>About This Site</h2>
+    <p>Built with vanilla technologies, deployed via GitHub Pages.</p>
+    <button id="closeModal" class="btn secondary">Close</button>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
